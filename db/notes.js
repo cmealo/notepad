@@ -57,7 +57,7 @@ export function getNotes() {
  * @returns {undefined} if no note with the given ID exists
  */
 export function getNoteById(id) {
-  const numericId = typeof === "string" ? parseInt(id,10) : id;
+  const numericId = typeof id === "string" ? parseInt(id, 10) : id;
   return notes.find((n) => n.id === numericId);
 }
 
